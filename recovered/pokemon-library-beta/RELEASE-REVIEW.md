@@ -25,4 +25,6 @@ A standard-library build extracts embedded art, styles and scripts without chang
 
 ## Required before a production release
 
-Verify Unbound PP data and section checksums; complete Pokémon backup field validation and atomicity for other multi-record workflows; test real saves and emulator round trips; exercise remaining feature interactions and recovery from interrupted imports. The current deliverable is a deployable beta.
+Verify Unbound PP data and section checksums; complete atomicity for other multi-record workflows; test real saves and emulator round trips; exercise remaining feature interactions and recovery from interrupted imports. The current deliverable is a deployable beta.
+
+Next portion: 14 backup-validator cases pass. The real browser fixture restores Pokémon records successfully, then rejects an invalid-IV replacement without changing stored archive metadata. Canonical identity is rebuilt from validated source fields. Other import/remove/build mutations still need atomicity review.

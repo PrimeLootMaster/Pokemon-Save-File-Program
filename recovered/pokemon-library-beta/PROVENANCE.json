@@ -5,9 +5,19 @@
     {
       "original_filename": "Pokemon-Save-File-Library-BETA.html",
       "source_path": "/workspace/Pokemon-Save-File-Program/Pokemon-Save-File-Library-BETA.html",
+      "source_bytes": 3548092,
+      "source_sha256": "68008ca5e8dddd776b495a02e44517492d678e1c2de9c8a40126c687fb2da63d",
+      "published_path": "Pokemon-Save-File-Library-BETA.html",
+      "published_sha256": "3d8c3e4589a2f47a4ee2072e43e81be68f399e2c41a1211e34a5724183cc4b4b",
+      "removed_image_occurrences": 19,
+      "chronology_evidence": "Next session revision: complete backup field validation; predecessor preserved in versions/02"
+    },
+    {
+      "original_filename": "Pokemon-Save-File-Library-BETA.html",
+      "source_path": "/workspace/Pokemon-Save-File-Program/Pokemon-Save-File-Library-BETA.html",
       "source_bytes": 3544157,
       "source_sha256": "9e33e770c5edfbd50d1751993737a33ed15d336bbd5911838eb52b13fb718c66",
-      "published_path": "Pokemon-Save-File-Library-BETA.html",
+      "published_path": "versions/02-before-complete-backup-validation.html",
       "published_sha256": "23deaf7c3d69f40e810fea31cbbe1f81247015294b0b8d772b435765932efb1c",
       "removed_image_occurrences": 19,
       "chronology_evidence": "Current session revision including entry fixes"

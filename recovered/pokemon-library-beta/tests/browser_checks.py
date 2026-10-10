@@ -40,7 +40,17 @@ with sync_playwright() as pw:
  const raw=Gen3Compat.fixture('emerald');
  await restore({...base,archives:[{id:'emerald:test',profile:'emerald',name:'test.sav',bytesBase64:TransferHub.bytesToBase64(raw),writeSafety:'verified',status:'readable'}]});
  const restored=await TransferHubDB.get('archives','emerald:test');
- const ok=invalid&&restored?.writeSafety==='unverified'&&new Uint8Array(restored.bytes).length===raw.length;
+ const archive={id:'emerald:test',profile:'emerald',name:'test.sav',importedAt:new Date().toISOString()};
+ const decoded=FullTreeConverter.decode(ConverterAdapterAudit.gen3Source('emerald'),'emerald','test.sav');
+ const records=TransferHub.recordsFromDecoded(decoded,archive);
+ if(!records.length)throw new Error('Fixture has no Pokémon');
+ await restore({...base,archives:[{...archive,bytesBase64:TransferHub.bytesToBase64(raw)}],pokemon:records});
+ const saved=await TransferHubDB.get('pokemon',records[0].id);
+ const bad=JSON.parse(JSON.stringify(records));bad[0].ivs.HP=32;
+ await restore({...base,archives:[{...archive,name:'must-not-change.sav'}],pokemon:bad});
+ const unchanged=(await TransferHubDB.get('archives',archive.id)).name==='test.sav';
+ const ok=invalid&&restored?.writeSafety==='unverified'&&new Uint8Array(restored.bytes).length===raw.length&&saved?.pid===records[0].pid&&unchanged;
+ for(const r of records)await TransferHubDB.delete('pokemon',r.id);
  await TransferHubDB.delete('archives','emerald:test');return ok;
  }""")
  assert result['backupRestore']

@@ -36,7 +36,7 @@ Known gaps:
 
 - Unbound section 4 checksum rules are unknown; direct repairs remain blocked.
 - Unbound party conversion and changed-move editing use provisional PP values instead of a verified move PP table.
-- Backup restoration validates basic schemas and uses an atomic transaction. Broader Pokémon field validation and atomicity of other multi-record workflows remain release work.
+- Backup restoration validates basic schemas and uses an atomic transaction. Pokémon field validation now checks numeric ranges, move/stat arrays, source references and raw bytes. Atomicity of other multi-record workflows remains release work.
 - Learnsets are not bundled; creation does not validate move legality.
 - Optional online artwork may fail offline. Global leaderboards/cloud synchronization are not implemented services.
 
@@ -49,3 +49,5 @@ This is an isolated recovery of the uploaded standalone workspace, not a replace
 Serve from this directory (`python -m http.server 8000`); set `APP_URL=http://127.0.0.1:8000/dist/` and `APP_BASE=http://127.0.0.1:8000/` when running browser checks.
 
 Independent fan utility; not affiliated with Nintendo, Game Freak, or The Pokémon Company.
+
+Run the pure backup validation regressions with `node --test tests/backup-validation.test.mjs`. `tools/backup-validation.js` is mirrored in the standalone validation script; keep both synchronized.
