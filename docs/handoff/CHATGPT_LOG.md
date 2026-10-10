@@ -76,3 +76,11 @@ Next action:
 **Documentation committed:** `docs/recovery/XENOGEARS_EDITOR_EVIDENCE.md` with source/package fingerprints, precise members, dependency note, 2/2 test evidence and Codex repo-creation instructions. No Xenogears source was uploaded to the temporary Pokémon repository.
 
 **Remaining:** dedicated Xenogears repo missing; full DuckStation state behavior not validated; other applications pending. The ChatGPT evidence PR is `https://github.com/PrimeLootMaster/Pokemon-Save-File-Program/pull/1` and remains unmerged.
+
+## 2026-10-10 — Gandalf and VTT source classification
+
+**Files inspected:** Five Gandalf Phone App HTML revisions, one Gandalf Grimoire Tap Book v2 HTML, and two D&D battlemap v1/v2 HTML files from ChatGPT Library; all distinct SHA-256 hashes recorded in `docs/recovery/DND_GANDALF_SOURCE_EVIDENCE.md`.
+
+**Test:** Extracted inline JS from all eight original files, ran `node --check` independently; **8/8 syntax checks passed**. No browser behavior, rules engine or persistence tested. Separate apps: phone app (latest 4 of 5), grimoire (1), battlemap (2). No D&D source or image assets uploaded yet; these need dedicated repositories.
+
+**Codex handoff:** Retain only 4 newest *phone app* revisions by verifiable development order, and never treat the distinct tap grimoire or battlemap as revisions of the phone app. Confirm if Windows/Codex has newer files first. Do not publish session storage or unreviewed art.
