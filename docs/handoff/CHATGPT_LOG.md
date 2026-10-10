@@ -42,3 +42,17 @@ Next action:
 ```
 
 **Do not infer that this file grants asynchronous execution.** Future ChatGPT instances should read it when the user resumes the task.
+
+## 2026-10-10 — independent v35 integrity audit (ChatGPT branch)
+
+**Working branch:** `chatgpt/catalog-v35-evidence`. No direct modifications to the minimal save-inspector source on `main`.
+
+**Source artifact:** `PokemonProgram-FROZEN-REFERENCE-ARCHIVE.zip` (40,423,130 bytes). SHA-256: `743c56403d64c9850a87a6fe5c2061711cce4aa147ec2c6b72235111cf60cec3`. Zip member count: 103.
+
+**Verified:** Computed SHA-256 from bytes of each of 16 `01_MODERN_V35_REFERENCE/*.html` files and matched each against archived `PokemonSaveFileHacks-v35-Verification.json`; **16/16 match**. Archived `ok:true` Chrome/test statuses are historical and were NOT independently replayed. All 16 HTML candidates contain `data:image/` assets; public redistribution rights remain unverified. No source HTML from v35 has been pushed.
+
+**New code:** `tools/audit_frozen_reference.py` (read-only ZIP metadata/hashes) and `tests/test_audit_frozen_reference.py` (three synthetic tests). Locally executed `python -m unittest discover -s tests -p 'test_audit_frozen_reference.py' -v`, 3 passing. Executed script against original archived ZIP with zero reported issues; the archived browser-feature tests were not rerun.
+
+**New documentation:** `docs/recovery/POKEMON_V35_EVIDENCE.md`, complete v35 SHA-256 table and publishing guardrails.
+
+**Next:** Submit PR to `main` for this non-conflicting tooling/doc contribution. Codex should focus on recovering the actual app source and identifying newest+three true chronological snapshots; no one should treat the 16 parallel v35 candidates as time-ordered versions.
