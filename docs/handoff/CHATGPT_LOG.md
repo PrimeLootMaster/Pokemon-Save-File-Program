@@ -56,3 +56,13 @@ Next action:
 **New documentation:** `docs/recovery/POKEMON_V35_EVIDENCE.md`, complete v35 SHA-256 table and publishing guardrails.
 
 **Next:** Submit PR to `main` for this non-conflicting tooling/doc contribution. Codex should focus on recovering the actual app source and identifying newest+three true chronological snapshots; no one should treat the 16 parallel v35 candidates as time-ordered versions.
+
+## 2026-10-10 — Sentinel and Organizer source package deduplication
+
+**Source:** five Sentinel ZIP names and two Organizer ZIPs independently recovered from ChatGPT Library and inspected locally. All six distinct `security_monitor.py` / `organizer.py` source instances passed Python `ast.parse`; plus RC1 `telemetry_acceptance_test.py` passed. **No Windows runtime tests performed.**
+
+**Result:** `SentinelLocal_v2_final.zip` is exactly identical to `SentinelLocal_v2.zip` (archive SHA-256 match); `SentinelLocal_RC1.zip` and `SentinelLocal_v2_1.zip` contain identical `security_monitor.py` but RC1 adds a telemetry acceptance test and runner, so they are *distinct package updates*. Retain RC1, v2.1, v2, v1. Organizer currently has only v1.1 and v1, both distinct.
+
+**Documentation committed:** `docs/recovery/SENTINEL_ORGANIZER_ARCHIVE_EVIDENCE.md` with ZIP hashes, inner source hashes, exact ZIP member paths, privacy warnings, status and Codex next operations. Original source not uploaded because dedicated repositories are not yet available through this connector.
+
+**Safety note:** Sentinel RC1 README mentions a user-specific prior malware detection; original logs and README must be assessed before public upload. Organizer is a tool that actually moves files and must only be tested with expendable fixtures, not live user data.
