@@ -66,3 +66,13 @@ Next action:
 **Documentation committed:** `docs/recovery/SENTINEL_ORGANIZER_ARCHIVE_EVIDENCE.md` with ZIP hashes, inner source hashes, exact ZIP member paths, privacy warnings, status and Codex next operations. Original source not uploaded because dedicated repositories are not yet available through this connector.
 
 **Safety note:** Sentinel RC1 README mentions a user-specific prior malware detection; original logs and README must be assessed before public upload. Organizer is a tool that actually moves files and must only be tested with expendable fixtures, not live user data.
+
+## 2026-10-10 — Codex PR assistance and Xenogears package verification
+
+**Concurrent Codex activity detected:** `codex/recover-pokemon-library-beta` exists. Its `docs/handoff/CODEX_LOG.md` records 4 distinct beta snapshots and test evidence. Codex's CLI reported authorization denied on PR creation, so ChatGPT opened a **draft, unmerged** review PR: `https://github.com/PrimeLootMaster/Pokemon-Save-File-Program/pull/2`. ChatGPT has not edited the Codex branch or certified its browser claims; preserve Codex's file ownership.
+
+**Xenogears recovered source:** Original `Xenogears_DuckStation_Save_Editor.html` has SHA-256 `0d616a652815ca7c04dd9b1085a8cb158428453273ce6861d27212af15680551`; packaged `index.html` has the **same bytes**. Original bundle includes a `.sav` file, excluded from public release. The trimmed project ZIP includes 2 Node structural tests: independently executed under Node v22.16.0, both passed. The application links an external `fzstd@0.1.1` script; fully offline behavior not certified.
+
+**Documentation committed:** `docs/recovery/XENOGEARS_EDITOR_EVIDENCE.md` with source/package fingerprints, precise members, dependency note, 2/2 test evidence and Codex repo-creation instructions. No Xenogears source was uploaded to the temporary Pokémon repository.
+
+**Remaining:** dedicated Xenogears repo missing; full DuckStation state behavior not validated; other applications pending. The ChatGPT evidence PR is `https://github.com/PrimeLootMaster/Pokemon-Save-File-Program/pull/1` and remains unmerged.
