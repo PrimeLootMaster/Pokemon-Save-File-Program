@@ -1,0 +1,46 @@
+{
+  "classification": "Recovered standalone save editor/workspace beta; relationship to v35 archive unverified; not the inspector scaffold or a playable game",
+  "publication_transform": "Embedded raster images removed pending asset redistribution permission; originals remain local and hashes document the transformation",
+  "snapshots": [
+    {
+      "original_filename": "Pokemon-Save-File-Library-BETA.html",
+      "source_path": "/workspace/Pokemon-Save-File-Program/Pokemon-Save-File-Library-BETA.html",
+      "source_bytes": 3548092,
+      "source_sha256": "68008ca5e8dddd776b495a02e44517492d678e1c2de9c8a40126c687fb2da63d",
+      "published_path": "Pokemon-Save-File-Library-BETA.html",
+      "published_sha256": "3d8c3e4589a2f47a4ee2072e43e81be68f399e2c41a1211e34a5724183cc4b4b",
+      "removed_image_occurrences": 19,
+      "chronology_evidence": "Next session revision: complete backup field validation; predecessor preserved in versions/02"
+    },
+    {
+      "original_filename": "Pokemon-Save-File-Library-BETA.html",
+      "source_path": "/workspace/Pokemon-Save-File-Program/Pokemon-Save-File-Library-BETA.html",
+      "source_bytes": 3544157,
+      "source_sha256": "9e33e770c5edfbd50d1751993737a33ed15d336bbd5911838eb52b13fb718c66",
+      "published_path": "versions/02-before-complete-backup-validation.html",
+      "published_sha256": "23deaf7c3d69f40e810fea31cbbe1f81247015294b0b8d772b435765932efb1c",
+      "removed_image_occurrences": 19,
+      "chronology_evidence": "Current session revision including entry fixes"
+    },
+    {
+      "original_filename": "Pokemon-Save-File-Library-BETA-pixel.html",
+      "source_path": "/workspace/Pokemon-Save-File-Program/Pokemon-Save-File-Library-BETA-pixel.html",
+      "source_bytes": 3541015,
+      "source_sha256": "7914d4830e89dd18a0ac6d50d4ea755e6d720f9a2780f1c73789462136a67918",
+      "published_path": "versions/01-before-eye-and-release-fixes.html",
+      "published_sha256": "b11e397f8e13aac7f7e945186b8256d512a7cf01ed3af78057a5e021a6e5d2bd",
+      "removed_image_occurrences": 19,
+      "chronology_evidence": "Earlier session revision; redrawn/refined aliases have the same bytes"
+    },
+    {
+      "original_filename": "Pokemon-Save-File-Library-BETA.html",
+      "source_path": "/workspace/attachments/597df15b-13ea-45e0-8674-9ad0be6415be/Pokemon-Save-File-Library-BETA.html",
+      "source_bytes": 3616589,
+      "source_sha256": "3185d9763046e35b2bfbd128f966ee0a3179611c0ec1f00227b0e3bbfd959105",
+      "published_path": "versions/00-original-upload.html",
+      "published_sha256": "85dfecb5f5e58d87534fa64946b3faf26155e36d9a142d3bea92464987ce6891",
+      "removed_image_occurrences": 19,
+      "chronology_evidence": "User upload preceding session edits; source creation timestamp unverified"
+    }
+  ]
+}
