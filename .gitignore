@@ -7,3 +7,15 @@ coverage/
 *.dat
 *.bak
 .DS_Store
+
+# Local session originals and generated delivery artifacts remain outside publication.
+/Pokemon-Save-File-Library-BETA*.html
+/pokemon-library-static.zip
+**/pokemon-library-static.zip
+__pycache__/
+*.gba
+*.nds
+*.ups
+*.psehstate
+.env
+.env.*
