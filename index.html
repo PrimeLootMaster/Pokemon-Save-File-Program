@@ -1,0 +1,5 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Local Save Inspector</title>
+<style>body{font:16px system-ui;background:#10151d;color:#e8edf5;max-width:850px;margin:3rem auto;padding:0 1rem}main{background:#1b2533;padding:2rem;border-radius:16px}button,input{margin:1rem 0}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#0c1118;padding:1rem;border-radius:8px}button{padding:.7rem 1rem}small{color:#b6c5d5}</style>
+</head><body><main><h1>Local Save Inspector</h1><p>Inspect and export your save without uploading it. No game-specific editing yet.</p><label for="file">Choose a local save</label><br><input id="file" type="file"><br><button id="download" disabled>Export unchanged save</button><pre id="details" aria-live="polite">No file selected.</pre><small>Keep a backup. Unknown files are not validated or decoded.</small></main><script type="module" src="./src/app.js"></script></body></html>
