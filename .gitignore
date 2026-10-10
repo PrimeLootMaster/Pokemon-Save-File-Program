@@ -1,0 +1,9 @@
+node_modules/
+dist/
+coverage/
+*.sav
+*.srm
+*.dsv
+*.dat
+*.bak
+.DS_Store
